@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== '/') {
+          history.replaceState(null, null, '/intkt' + redirect);
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VNTKT — 國際機票訂位系統</title>
-    <script type="module" crossorigin src="/assets/index-DZBi-cHM.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BNS3EiB3.css">
+    <script type="module" crossorigin src="/intkt/assets/index-HMtq1w4H.js"></script>
+    <link rel="stylesheet" crossorigin href="/intkt/assets/index-BERpbF2O.css">
   </head>
   <body>
     <div id="root"></div>
